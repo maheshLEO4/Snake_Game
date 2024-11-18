@@ -1,0 +1,110 @@
+/* Body and overall styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container for the to-do list */
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Title styling */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Input and button layout */
+input {
+    padding: 10px;
+    width: 300px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Task list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+li:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+/* Complete and Delete button styling */
+button.complete-btn {
+    background-color: #28a745;
+    border-color: #28a745;
+    margin-right: 10px;
+}
+
+button.delete-btn {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* Completed task styling */
+.list-group-item-success {
+    text-decoration: line-through;
+    background-color: #d4edda !important;
+}
+
+/* Responsive styling */
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
