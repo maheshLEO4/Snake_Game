@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <title>Add Student</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Student</h1>
+
+        <!-- Add Student Form -->
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name:</label>
+                {{ form.name }}
+            </div>
+            <div class="form-group">
+                <label for="roll_no">Roll No:</label>
+                {{ form.roll_no }}
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                <label for="branch">Branch:</label>
+                {{ form.branch }}
+            </div>
+            <div class="form-group">
+                <label for="section">Section:</label>
+                {{ form.section }}
+            </div>
+
+            <button type="submit" class="btn submit">Add Student</button>
+        </form>
+
+        <!-- Back to List Link -->
+        <a href="{% url 'display_students' %}" class="btn back">Back to List</a>
+    </div>
+</body>
+</html>
